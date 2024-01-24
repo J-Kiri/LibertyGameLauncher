@@ -27,8 +27,8 @@ if not is_admin():
     ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
     sys.exit()
 
-APP_KEY = '30cmzgdcwb3udf1'
-APP_SECRET = 'dolklifa8bdkoij'
+APP_KEY = ''
+APP_SECRET = ''
 CONFIG_FILE = 'config.ini'
 
 auth_flow = DropboxOAuth2FlowNoRedirect(APP_KEY, APP_SECRET)
