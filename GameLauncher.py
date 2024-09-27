@@ -18,8 +18,8 @@ from dropbox import DropboxOAuth2FlowNoRedirect
 from dropbox.files import WriteMode
 from dropbox.exceptions import ApiError, AuthError
 
-play_button = Image.open('assets/play_BUTTON.png')
-config_button = Image.open('assets/config_BUTTON.png')
+play_button = Image.open('assets/BUTTON_play.png')
+config_button = Image.open('assets/BUTTON_config.png')
 
 try:
     def is_admin():
@@ -32,8 +32,8 @@ try:
         ctypes.windll.shell32.ShellExecuteW(None, "runas", sys.executable, " ".join(sys.argv), None, 1)
         sys.exit()
 
-    APP_KEY = ''
-    APP_SECRET = ''
+    APP_KEY = '30cmzgdcwb3udf1'
+    APP_SECRET = 'dolklifa8bdkoij'
     CONFIG_FILE = 'config.ini'
 
     auth_flow = DropboxOAuth2FlowNoRedirect(APP_KEY, APP_SECRET)
@@ -84,32 +84,37 @@ try:
             self.right_panel = ttk.Frame(self.main_frame)
             self.right_panel.pack(side="right", fill="both", expand=True)
 
-            self.cover_label = ttk.Label(self.right_panel, text="Selecione um jogo", font=("Arial", 20))
-            self.cover_label.pack(pady=10, fill="x")
-
             self.cover_image = ttk.Label(self.right_panel)
             self.cover_image.pack(pady=10, fill="x", expand=True)
-            
-            # Buttons
+            # Buttons Frame (to arrange buttons horizontally)
+            self.button_frame = ttk.Frame(self.right_panel)
+            self.button_frame.pack(pady=5, fill="x")
+
+            # Play Button
             play_button_image = ImageTk.PhotoImage(play_button)
             self.play_button = ttk.Button(
-                self.right_panel,
+                self.button_frame,
                 image=play_button_image,
-                bootstyle=("dark"),
-                command=self.launch_game
+                command=self.launch_game,
+                style="TButton"
             )
-            self.play_button.pack(pady=5, fill="x")
+            self.play_button.pack(side="left", padx=5)
             self.play_button.image = play_button
 
+            # Config Button
             config_button_image = ImageTk.PhotoImage(config_button)
             self.config_button = ttk.Button(
-                self.right_panel,
+                self.button_frame,
                 image=config_button_image,
-                bootstyle=("dark"),
-                command=self.edit_game
+                command=self.edit_game,
+                style="TButton"
             )
-            self.config_button.pack(pady=5, fill="x")
+            self.config_button.pack(side="left", padx=5)
             self.config_button.image = config_button
+
+            # Remove button background and set size to image size
+            style = ttk.Style()
+            style.configure("TButton", borderwidth=0, highlightthickness=0, padding=0)
 
             # Menu Bar
             self.menu_bar = ttk.Menu(self.master)
@@ -168,8 +173,8 @@ try:
                     self.game_list_frame,
                     image=icon,
                     text=game["game_name"],
-                    bootstyle=("dark"),
                     compound="left",
+                    bootstyle=("dark"),
                     command=lambda g=game: self.show_game_details(g),
                 )
                 button.configure()
