@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>false</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1282</width>
+    <height>722</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>994</width>
+    <height>564</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Game_details">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1920</width>
+      <height>1080</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>C:/Users/joaog/OneDrive/Documentos/dead-cells-game-thumb 1.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="Games_display" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>59</y>
+      <width>240</width>
+      <height>1021</height>
+     </rect>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(0, 0, 0, 158);</string>
+    </property>
+    <widget class="QFrame" name="recentes">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>10</y>
+       <width>240</width>
+       <height>141</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QPushButton" name="game_button_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>35</y>
+        <width>240</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Game_Name</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../Yuzu 3602/2cfa3753d6a524711acb5fce38eeca1a.ico</normaloff>../Yuzu 3602/2cfa3753d6a524711acb5fce38eeca1a.ico</iconset>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="game_button">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>65</y>
+        <width>240</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Game_Name</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>../Yuzu 3602/2cfa3753d6a524711acb5fce38eeca1a.ico</normaloff>../Yuzu 3602/2cfa3753d6a524711acb5fce38eeca1a.ico</iconset>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="recents_collapsable">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>240</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>240</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>RECENTES</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>assets/ICON_Recentes.png</normaloff>assets/ICON_Recentes.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="tristate">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="Menu_Bar" native="true">
+    <property name="geometry">
+     <rect>
+      <x>-1</x>
+      <y>0</y>
+      <width>1920</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(20, 20, 20);</string>
+    </property>
+    <widget class="QLabel" name="logo">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>15</y>
+       <width>121</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>assets/LOGO.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>1234</x>
+       <y>24</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>assets/ICON_Menu.png</normaloff>assets/ICON_Menu.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>21</width>
+       <height>21</height>
+      </size>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
